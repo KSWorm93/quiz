@@ -1,0 +1,5 @@
+<p>Welcome to the Quiz!</p>
+<p>Here are the possible quiz's you can do!</p>
+{{#each metadata.quizArr}}
+    <a href="/quiz/{{this}}">Quiz {{this}}</a>
+{{/each}}

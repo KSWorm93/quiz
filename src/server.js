@@ -1,9 +1,10 @@
 'use strict';
 
 //Imports
-const dirs = require('./utilities/directories');
 const express = require('express');
 const hbs = require('hbs');
+const dirs = require('./utilities/directories');
+const db = require('./utilities/database');
 
 //Constants
 const server = express();
@@ -26,7 +27,25 @@ server.engine('html', hbs.__express);
 //Add routes
 require(dirs.routes + '/router.js')(server);
 
-//start the server
-server.listen(PORT);
+//Run final logic
+(async () => {
+    const databaseInitialized = await db.init();
+    console.log('Database - Initialized: ' + databaseInitialized);
+
+    if (databaseInitialized) {
+        //Start the server once database is ready
+        server.listen(PORT);
+        console.log('Server - Running at: ' + HOSTNAME + PORT);
+    } else {
+        console.log('Database - Failed to initialize! Exiting.');
+        throw ('ERROR - Failed to initialize!');
+    }
+
+    //Testing database function
+    // const written = await db.writeQuiz();
+    // const written = await db.getQuiz('0');
+    // console.log(written);
+
+})();
 
 console.log('Server running at: ' + HOSTNAME + PORT);

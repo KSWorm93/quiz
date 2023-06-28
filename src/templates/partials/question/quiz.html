@@ -1,0 +1,7 @@
+<p>{{data.title}}</p>
+<p>{{data.intro}}</p>
+{{#each data.questions}}
+    <div>
+        <a href="/quiz/{{../quizId}}/{{@index}}">Question {{@index}}</a>
+    </div>
+{{/each}}

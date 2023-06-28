@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz</title>
+    </head>
+
+    <body>
+        {{> navigation/navigation}}
+        
+        {{#if showMetadata}} 
+            {{> question/metadata}}
+        {{/if}}
+
+        {{#if showQuiz}} 
+            {{> question/quiz}}
+        {{/if}}
+        
+        {{#if showQuestion}} 
+            {{> question/question}}
+        {{/if}}
+
+    </body>
+</html>

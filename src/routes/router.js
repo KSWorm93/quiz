@@ -38,19 +38,39 @@ const configObjects = {
 			active: 'about'
 		}
 	},
-	page1: {
+	guide: {
 		navigation: {
-			active: 'page1'
+			active: 'guide'
 		}
 	},
-	page2: {
+	quiz: {
 		navigation: {
-			active: 'page2'
+			active: 'quiz'
 		}
 	},
-	page3: {
+	hint: {
 		navigation: {
-			active: 'page3'
+			active: 'hint'
+		}
+	},
+	reset: {
+		navigation: {
+			active: 'reset'
+		}
+	},
+	load: {
+		navigation: {
+			active: 'load'
+		}
+	},
+	reward: {
+		navigation: {
+			active: 'reward'
+		}
+	},
+	score: {
+		navigation: {
+			active: 'score'
 		}
 	}
 };

@@ -12,6 +12,11 @@ const directories = new function () {
     this.client = this.source + '/client';
     this.css = this.client + '/css';
     this.js = this.client + '/js';
+    this.database = __dirname + rootProject + '/database';
+    this.quizData = this.database + '/quizData';
+    this.staticFiles = {
+        metadata: this.database + '/metadata.json'
+    };
 };
 
 module.exports = directories;

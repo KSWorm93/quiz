@@ -1,0 +1,8 @@
+<p>{{data.category}}</p>
+<p>{{data.question}}</p>
+<p>{{data.image}}</p>
+{{#each data.choices}}
+    <p>{{this}}</p>
+{{/each}}
+
+<a href="/quiz/{{quizId}}/">Back to quiz</a>
