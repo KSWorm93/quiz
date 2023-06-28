@@ -1,0 +1,26 @@
+/* Add a black background color to the top navigation */
+.navigation {
+    background-color: cyan;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navigation a {
+    float: left;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .navigation a:hover {
+    background-color: turquoise;
+  }
+  
+  /* Add a color to the active/current link */
+  .navigation a.active {
+    background-color: blue;
+    color: cyan;
+  }
